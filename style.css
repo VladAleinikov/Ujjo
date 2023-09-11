@@ -8,7 +8,6 @@
       text-decoration: none;
       font-family: "Roboto", sans-serif;
 }
-
 /* ---------   Header Styles   --------- */
 header {
       display: flex;
@@ -17,12 +16,10 @@ header {
       border: 1px solid #000;
       max-width: 90%;
       max-width: 1400px;
-      min-height: 112px;
+      min-height: 100px;
+      padding: 6px 0;
       justify-content: space-around;
       align-items: center;
-}
-header nav {
-      width: 40%;
 }
 header nav ul {
       width: 100%;
@@ -31,11 +28,14 @@ header nav ul {
       justify-content: space-between;
 }
 header nav ul li {
-      display: block;
-}
-header nav a {
       font-size: 14px;
       padding: 15px 44px;
+      display: block;
+}
+header nav ul li a{
+      display: block;
+      width: 100%;
+      text-align: center;
 }
 .header__logo {
       position: relative;
@@ -61,6 +61,8 @@ header nav a {
 }
 .btn-red {
       background: #fb4b4d;
+}
+.btn-red a{
       color: #fff;
 }
 
@@ -99,22 +101,27 @@ section {
       line-height: 30px;
       letter-spacing: 0.5px;
       animation: 5s linear infinite carousel-animation;
-
 }
 .carousel__item img {
       margin-left: 30px;
 }
-@keyframes carousel-animation{
-      0%{
+@keyframes carousel-animation {
+      0% {
             transform: translateZ(0);
       }
-      100%{
-            transform: translate3d(-100%, 0,0 );
+      100% {
+            transform: translate3d(-100%, 0, 0);
       }
 }
 
 /* ---------   Hero Section Styles   --------- */
-
+.hero-left__logo img,
+.hero-left__image img,
+.hero-right__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
 .hero-left {
       display: flex;
       width: 50%;
@@ -126,6 +133,7 @@ section {
       justify-content: center;
       align-items: center;
       padding: 20px 20px 30px 20px;
+      width: calc(100% - 40px);
 }
 .hero-right {
       display: flex;
@@ -140,14 +148,15 @@ section {
 }
 .hero-right__image {
       padding: 20px;
+      width: calc(100% - 40px);
 }
 
 /* ---------   Products Section Styles   --------- */
-.products{
+.products {
       display: flex;
       flex-direction: column;
 }
-.products__title{
+.products__title {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -155,74 +164,87 @@ section {
       padding: 59px 0;
       border-bottom: 1px solid #000;
 }
-.products__title h2{
+.products__title h2 {
       width: 50%;
       font-size: 65px;
       line-height: 72.6px;
       letter-spacing: 0.5px;
       text-align: center;
 }
-.products__title img:nth-child(3){
+.products__title img:nth-child(3) {
       transform: rotateY(180deg);
 }
-.products__list{
+.products__list {
       position: relative;
       margin: 20px;
 }
-.list__decorations{
+.list__decorations {
       display: flex;
       justify-content: space-between;
       position: absolute;
       width: 100%;
 }
-.list__decorations img{
+.list__decorations img {
       height: fit-content;
 }
-.product-items{
+.product-items {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
 }
-.product-items li{
+.product-items li {
       display: flex;
       flex-direction: column;
       justify-content: end;
       align-items: center;
       background-image: url(./assets/product-bg.png);
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
-      width: 400px;     
-      height: 620px;
+      width: 400px;
+      max-width: 90%;
+      max-height: 620px;
       padding: 20px;
+      padding-top: 80px;
 }
-.product-item__subtitle{
+.product-item__subtitle {
       font-size: 18px;
       line-height: 28.1px;
       letter-spacing: 0.5px;
       padding-bottom: 12px;
+      text-align: center;
 }
-.product-item__title{
+.product-item__title {
       font-size: 32px;
       line-height: 38px;
       letter-spacing: 0.5px;
       padding-bottom: 12px;
+      text-align: center;
 }
-.products_image{
+.product-item img{
+      width: 100%;
+}
+.products_image {
       padding: 20px;
 }
-
+.products_image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
 /* ---------   Story Section Styles   --------- */
-.story{
+.story {
       display: flex;
       flex-direction: row;
       border-bottom: none;
 }
-.story-left{
+.story-left {
       border-right: 1px solid #000;
       display: flex;
       flex-direction: column;
 }
-.story-left h2{
+.story-left h2 {
       font-size: 58px;
       line-height: 64.5px;
       letter-spacing: 0.5px;
@@ -230,13 +252,21 @@ section {
       padding: 54px;
       padding-bottom: 44px;
 }
-.story-right{
+.story-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 400px;
+      height: 440px;
+      margin: auto;
       padding: 130px 150px;
       background-image: url(./assets/story-bg.svg);
+      background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
 }
-.story-right p{
+.story-right p {
+      width: 100%;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.5px;
@@ -244,7 +274,7 @@ section {
 }
 
 /* ---------   Footer Styles   --------- */
-footer{
+footer {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
@@ -256,13 +286,18 @@ footer{
       background-size: cover;
       background-repeat: no-repeat;
 }
-.footer__carousel .carousel__item{
+.footer__carousel .carousel__item {
       min-width: 500px;
 }
-.footer__image{
+.footer__image {
       padding: 20px;
 }
-.footer__copyright ul{
+.footer__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+.footer__copyright ul {
       height: 65px;
       display: flex;
       flex-direction: row;
@@ -270,6 +305,45 @@ footer{
       justify-content: space-around;
       border-top: 1px solid #000;
 }
-.footer__copyright ul li{
+.footer__copyright ul li {
       display: inline;
+}
+
+/* ---------   <1400px Styles   --------- */
+@media (max-width: 1400px) {
+      header,
+      header nav ul {
+            flex-direction: column;
+      }
+      .list__decorations {
+            display: none;
+      }
+      .story {
+            flex-direction: column;
+      }
+      .story-left img {
+            display: none;
+      }
+}
+/* ---------   <768px Styles   --------- */
+@media (max-width: 768px) {
+      .hero,
+      .product-items, .products__title {
+            flex-direction: column;
+      }
+      .hero-left,
+      .hero-right {
+            width: 100%;
+      }
+      .hero-left {
+            border-bottom: 1px solid #000;
+      }
+      .story-right{
+            width: 60%;
+            padding: 20%;
+            background-size: cover;
+      }
+      .story-right p{
+            font-size: 10px;
+      }
 }
