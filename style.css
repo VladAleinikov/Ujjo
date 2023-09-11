@@ -210,3 +210,32 @@ section {
 .products_image{
       padding: 20px;
 }
+
+/* ---------   Story Section Styles   --------- */
+.story{
+      display: flex;
+      flex-direction: row;
+}
+.story-left{
+      border-right: 1px solid #000;
+}
+.story-left h2{
+      font-size: 58px;
+      line-height: 64.5px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      padding: 54px;
+      padding-bottom: 44px;
+}
+.story-right{
+      padding: 130px 150px;
+      background-image: url(./assets/story-bg.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+}
+.story-right p{
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      text-align: center;
+}
