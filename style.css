@@ -16,6 +16,7 @@ header {
       margin: 0 auto;
       border: 1px solid #000;
       max-width: 90%;
+      max-width: 1400px;
       min-height: 112px;
       justify-content: space-around;
       align-items: center;
@@ -61,4 +62,66 @@ header nav a {
 .btn-red {
       background: #fb4b4d;
       color: #fff;
+}
+
+/* ---------   Section Styles   --------- */
+section{
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      border: 1px solid #000;
+      border-top: none;
+      max-width: 90%;
+      max-width: 1400px;
+
+}
+
+/* ---------   Hero Section Styles   --------- */
+
+.hero-left{
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      border-right: 1px solid #000;
+}
+.hero-left__carousel{
+      position: relative;
+      height: 30px;
+      padding: 23px 0;
+      border-bottom: 1px solid #000;
+      border-top: 1px solid #000;
+      overflow: hidden;
+}
+.carousel__item{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      height: 30px;
+      padding-right: 15px;
+      font-size: 17px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+}
+.carousel__item img{
+      margin-left: 30px;
+}
+.hero-left__image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 20px 30px 20px;
+}
+.hero-right{
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+}
+.hero-right__title{
+      font-size: 58px;
+      text-align: center;
+      padding: 24px 80px 15px;
+      border-bottom: 1px solid #000;
+}
+.hero-right__image{
+      padding: 20px;
 }
