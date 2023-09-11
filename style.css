@@ -21,7 +21,7 @@ header {
       justify-content: space-around;
       align-items: center;
 }
-header nav{
+header nav {
       width: 40%;
 }
 header nav ul {
@@ -65,7 +65,7 @@ header nav a {
 }
 
 /* ---------   Section Styles   --------- */
-section{
+section {
       display: flex;
       flex-direction: row;
       margin: 0 auto;
@@ -73,55 +73,67 @@ section{
       border-top: none;
       max-width: 90%;
       max-width: 1400px;
-
 }
 
 /* ---------   Hero Section Styles   --------- */
 
-.hero-left{
+.hero-left {
       display: flex;
       width: 50%;
       flex-direction: column;
       border-right: 1px solid #000;
 }
-.hero-left__carousel{
+.hero-left__carousel {
       position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
       height: 30px;
       padding: 23px 0;
       border-bottom: 1px solid #000;
       border-top: 1px solid #000;
       overflow: hidden;
 }
-.carousel__item{
-      position: absolute;
+.carousel__item {
       display: flex;
       justify-content: center;
       height: 30px;
+      min-width: 350px;
       padding-right: 15px;
       font-size: 17px;
       line-height: 30px;
       letter-spacing: 0.5px;
+      animation: 5s linear infinite carousel-animation;
+
 }
-.carousel__item img{
+@keyframes carousel-animation{
+      0%{
+            transform: translateZ(0);
+      }
+      100%{
+            transform: translate3d(-100%, 0,0 );
+      }
+}
+.carousel__item img {
       margin-left: 30px;
 }
-.hero-left__image{
+.hero-left__image {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px 20px 30px 20px;
 }
-.hero-right{
+.hero-right {
       display: flex;
       width: 50%;
       flex-direction: column;
 }
-.hero-right__title{
+.hero-right__title {
       font-size: 58px;
       text-align: center;
       padding: 24px 80px 15px;
       border-bottom: 1px solid #000;
 }
-.hero-right__image{
+.hero-right__image {
       padding: 20px;
 }
