@@ -215,9 +215,12 @@ section {
 .story{
       display: flex;
       flex-direction: row;
+      border-bottom: none;
 }
 .story-left{
       border-right: 1px solid #000;
+      display: flex;
+      flex-direction: column;
 }
 .story-left h2{
       font-size: 58px;
@@ -238,4 +241,35 @@ section {
       line-height: 24px;
       letter-spacing: 0.5px;
       text-align: center;
+}
+
+/* ---------   Footer Styles   --------- */
+footer{
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      border: 1px solid #000;
+      border-top: none;
+      max-width: 90%;
+      max-width: 1400px;
+      background-image: url(./assets/footer-bg.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+.footer__carousel .carousel__item{
+      min-width: 500px;
+}
+.footer__image{
+      padding: 20px;
+}
+.footer__copyright ul{
+      height: 65px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      border-top: 1px solid #000;
+}
+.footer__copyright ul li{
+      display: inline;
 }
